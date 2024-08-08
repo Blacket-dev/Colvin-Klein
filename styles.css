@@ -1,0 +1,140 @@
+/* styles.css */
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #101820;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background: #282c34;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+    background: linear-gradient(135deg, #6e45e1, #88d3ce);
+    padding: 20px;
+    text-align: center;
+}
+
+.title h1 {
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+}
+
+.animated-text-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    animation: fadeInText 3s infinite;
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.video-display {
+    background: #3a3a3a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.video-display video {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.options {
+    display: flex;
+    justify-content: space-between; /* Ensure buttons are spaced evenly */
+    background: #1f1f1f;
+    padding: 15px;
+    gap: 10px; /* Gap between buttons */
+    overflow-x: auto; /* Allow horizontal scrolling if buttons overflow */
+    white-space: nowrap; /* Prevent buttons from wrapping */
+}
+
+.option-btn {
+    flex: 0 1 auto;
+    min-width: 100px;
+    background: transparent;
+    border: 2px solid #6e45e1;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.option-btn:hover {
+    background: #6e45e1;
+    transform: scale(1.05);
+}
+
+.option-btn.active {
+    background: #88d3ce;
+    border-color: #88d3ce;
+}
+
+/* Responsive Breakpoints */
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 1.5rem;
+    }
+
+    .option-btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 1.2rem;
+    }
+
+    .option-btn {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+}
